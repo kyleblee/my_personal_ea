@@ -19,8 +19,9 @@
       <% else %>
         <%=erb :'headers/header_in'%>
       <%end%>
-
-      <%=yield%>
+        <div class="main-content clearfix">
+          <%=yield%>
+        </div>
       </div>
       <div class="push"></div>
       <%if !logged_in?%>

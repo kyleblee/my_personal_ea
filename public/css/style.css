@@ -1,3 +1,5 @@
+/*****GENERAL*****/
+
 * {
   margin: 0;
   padding: 0;
@@ -24,44 +26,19 @@ body {
   margin: 0;
 }
 
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+/*****HEADERS*****/
+
 header {
-  height: 450px;
-  background: url(../img/croatia_coast.jpg) center center;
-  background-size: cover;
-}
-
-div.tint {
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0, 0.2);
-  transition: all .3s linear;
-}
-
-header h1 {
-  font-size: 72px;
-  font-weight: 700;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-align: center;
-  margin-bottom: 25px;
-  clear: both;
-  padding-top: 100px;
-}
-
-header h1 span {
-  display: inline-block;
-  padding: 0.2em 0.5em;
-  border: white solid 10px;
-}
-
-header p.kicker {
-  text-align: center;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: white;
-  line-height: 1;
+  height: 99px;
+  background: rgba(253, 232, 205, 0.5);
 }
 
 div.logo a {
@@ -71,7 +48,7 @@ div.logo a {
 
 header div.logo p {
   font-size: 1.25em;
-  margin: 30px 0 0 30px;
+  margin: 35px 0 0 30px;
   float: left;
   display: inline-block;
   font-weight: 700;
@@ -83,7 +60,7 @@ div.logo a:hover {
 }
 
 header nav {
-  margin: 30px 30px 0 0;
+  margin: 38px 30px 0 0;
   display: inline-block;
   font-weight: 700;
   font-size: 14px;
@@ -108,9 +85,53 @@ nav a:hover {
   color: rgba(0, 0, 0, 1);
 }
 
+/*****HOMEPAGE*****/
+
+div.homepage-main {
+  background: url(../img/croatia_coast.jpg) center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+div.tint {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.2);
+    transition: all .3s linear;
+}
+
+div.homepage-main h1 {
+  font-size: 72px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-bottom: 25px;
+  clear: both;
+  padding-top: 100px;
+}
+
+div.homepage-main h1 span {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  border: white solid 10px;
+}
+
+div.homepage-main p.kicker {
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: white;
+  line-height: 1;
+}
+
+/*****FOOTER*****/
+
 footer {
   background: rgba(253, 232, 205, 0.5);
-  background-size: cover;
   clear: both;
   position: relative;
   margin-top: -99px;
@@ -141,14 +162,6 @@ footer div.lockup div.content-wrap p.copyright {
 
 footer div.lockup div.content-wrap p#copyright-out {
   margin-top: 5px;
-}
-
-.clearfix:after {
-   content: " ";
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
 }
 
 footer nav a {
