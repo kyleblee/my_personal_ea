@@ -5,22 +5,21 @@ body {
 
 header {
   height: 450px;
-  background: url(../img/coffeeshop_worker.jpg) center center;
+  background: url(../img/croatia_coast.jpg) center center;
   background-size: cover;
 }
 
 div.tint {
   width: 100%;
   height: 100%;
-  background: rgba(242,196,55, 0.4);
+  background: rgba(0,0,0, 0.2);
   transition: all .3s linear;
-  /*background: rgba(218,216,124, 0.5);*/
 }
 
 header h1 {
   font-size: 72px;
   font-weight: 700;
-  color: black;
+  color: white;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   text-align: center;
@@ -32,7 +31,7 @@ header h1 {
 header h1 span {
   display: inline-block;
   padding: 0.2em 0.5em;
-  border: black solid 10px;
+  border: white solid 10px;
 }
 
 header p.kicker {
@@ -40,7 +39,7 @@ header p.kicker {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: black;
+  color: white;
   line-height: 1;
 }
 
@@ -51,7 +50,7 @@ div.logo p {
   display: inline-block;
   font-weight: 700;
   text-transform: uppercase;
-  color: black;
+  color: rgba(0,0,0,0.7);
 }
 
 nav {
@@ -65,7 +64,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: rgba(0,0,0,0.7);
   margin-left: 20px;
 }
 
