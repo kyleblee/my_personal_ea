@@ -14,15 +14,19 @@
   </head>
   <body>
     <div id="wrap">
-      <%if logged_in?%>
-        <%=erb :header%>
+      <%if !logged_in?%>
+        <%=erb :'headers/header_out'%>
+      <% else %>
+        <%=erb :'headers/header_in'%>
       <%end%>
 
       <%=yield%>
       </div>
       <div class="push"></div>
-      <%if logged_in?%>
-        <%=erb :footer%>
+      <%if !logged_in?%>
+        <%=erb :'footers/footer_out'%>
+      <% else %>
+        <%=erb :'footers/footer_in'%>
       <%end%>
   </body>
 </html>

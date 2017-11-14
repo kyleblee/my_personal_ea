@@ -139,6 +139,10 @@ footer div.lockup div.content-wrap p.copyright {
   color: rgba(0, 0, 0, 0.4);
 }
 
+footer div.lockup div.content-wrap p#copyright-out {
+  margin-top: 5px;
+}
+
 .clearfix:after {
    content: " ";
    visibility: hidden;
