@@ -14,15 +14,13 @@
   </head>
   <body>
     <%if logged_in?%>
-      <div id="header">
-      </div><!--end header-->
+      <%=erb :header%>
     <%end%>
 
     <%=yield%>
 
     <%if logged_in?%>
-      <div id="footer">
-      </div><!--end footer-->
+      <%=erb :footer%>
     <%end%>
   </body>
 </html>
