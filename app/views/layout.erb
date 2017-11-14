@@ -13,14 +13,16 @@
     </script>
   </head>
   <body>
-    <%if logged_in?%>
-      <%=erb :header%>
-    <%end%>
+    <div id="wrap">
+      <%if logged_in?%>
+        <%=erb :header%>
+      <%end%>
 
-    <%=yield%>
-
-    <%if logged_in?%>
-      <%=erb :footer%>
-    <%end%>
+      <%=yield%>
+      </div>
+      <div class="push"></div>
+      <%if logged_in?%>
+        <%=erb :footer%>
+      <%end%>
   </body>
 </html>
