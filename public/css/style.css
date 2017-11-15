@@ -78,7 +78,7 @@ nav a:hover {
   color: rgba(0, 0, 0, 1);
 }
 
-/*****HOMEPAGE*****/
+/*****HOMEPAGE (logged out)*****/
 
 div.homepage-main {
   background: url(../img/croatia_coast.jpg) center center;
@@ -112,6 +112,10 @@ div.homepage-main p.kicker {
   color: black;
   line-height: 1;
 }
+
+/*****USER HOMEPAGE (logged in)*****/
+
+
 
 /*****FOOTER*****/
 
@@ -166,7 +170,7 @@ footer nav a:first-child {
 
 .form-body {
   max-width: 450px;
-  margin: 20px auto 0;
+  margin: 15px auto 0;
 }
 
 form.form-body label {
@@ -215,4 +219,18 @@ form.form-body input.submit-button:hover {
   text-transform: uppercase;
   color: rgb(138,95,119);
   margin: 20px 0 -15px;
+}
+
+/*****LOGIN FORM*****/
+
+#new-to-ea-kicker {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.85em;
+  color: rgba(0,0,0,0.7);
+}
+
+#new-to-ea-kicker a {
+  text-decoration: none;
+  color: rgb(138,95,119);
 }

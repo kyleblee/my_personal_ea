@@ -8,6 +8,33 @@ class UsersController < ApplicationController
     end
   end
 
+  get '/users/login' do
+    if logged_in?
+      redirect '/users/home'
+    else
+      erb :'users/login'
+    end
+  end
+
+  post '/users/login' do
+    if params.value?("")
+      flash[:message] = "Please enter both username and password."
+      redirect '/users/login'
+    elsif @user = User.find_by(username: params[:username])
+      if @user.authenticate(params[:password])
+        session[:user_id] = @user.id
+        redirect '/users/home'
+      else
+        flash[:message] = "Incorrect password. Please try again."
+        redirect '/users/login'
+      end
+    else
+      flash[:message] = "No user found with that username. Please try again or <a href='/users/signup'>sign up here</a>."
+      redirect '/users/login'
+    end
+
+  end
+
   post '/users' do
     if params.value?("")
       flash[:message] = "Please fill out all of the form."

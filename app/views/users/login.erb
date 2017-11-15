@@ -1,0 +1,16 @@
+<h1 class="form-headers">Log In</h1>
+
+<% if flash.has?(:message)%>
+  <p id="error-message"><%=flash[:message]%></p>
+<% end %>
+
+<form class="form-body" action="/users/login" method="post">
+  <label for="username"><span>Username</span></label>
+  <input id="username" type="text" name="username">
+
+  <label for="password"><span>Password</span></label>
+  <input id="password" type="password" name="password">
+
+  <input class="submit-button" type="submit" value="Sign Up!">
+</form>
+<p id="new-to-ea-kicker">New to My Personal EA? Sign up <a href="/users/signup">here</a>!</p>
