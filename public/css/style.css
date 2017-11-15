@@ -10,20 +10,10 @@ body {
   height: 100%;
 }
 
-#wrap {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -99px;
-}
-
-.push {
-    height: 99px;
-}
-
 body {
   font-family: 'Open Sans', sans-serif;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .clearfix:after {
@@ -48,7 +38,7 @@ div.logo a {
 
 header div.logo p {
   font-size: 1.25em;
-  margin: 35px 0 0 30px;
+  margin: 30px 0 30px 30px;
   float: left;
   display: inline-block;
   font-weight: 700;
@@ -90,8 +80,9 @@ nav a:hover {
 div.homepage-main {
   background: url(../img/croatia_coast.jpg) center center;
   background-size: cover;
-  height: 100%;
-  width: 100%;
+  min-height: 100%; /*add back if not working*/
+  height: 100%; /*add back if not working*/
+  flex: 1 0 auto; /*remove back if not working*/
 }
 
 div.tint {
@@ -104,7 +95,7 @@ div.tint {
 div.homepage-main h1 {
   font-size: 72px;
   font-weight: 700;
-  color: white;
+  color: black;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   text-align: center;
@@ -116,7 +107,7 @@ div.homepage-main h1 {
 div.homepage-main h1 span {
   display: inline-block;
   padding: 0.2em 0.5em;
-  border: white solid 10px;
+  border: black solid 10px;
 }
 
 div.homepage-main p.kicker {
@@ -124,7 +115,7 @@ div.homepage-main p.kicker {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: white;
+  color: black;
   line-height: 1;
 }
 
@@ -133,8 +124,6 @@ div.homepage-main p.kicker {
 footer {
   background: rgba(253, 232, 205, 0.5);
   clear: both;
-  position: relative;
-  margin-top: -99px;
   height: 99px;
 }
 

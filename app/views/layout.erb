@@ -13,21 +13,18 @@
     </script>
   </head>
   <body>
-    <div id="wrap">
-      <%if !logged_in?%>
-        <%=erb :'headers/header_out'%>
-      <% else %>
-        <%=erb :'headers/header_in'%>
-      <%end%>
-        <div class="main-content clearfix">
-          <%=yield%>
-        </div>
-      </div>
-      <div class="push"></div>
-      <%if !logged_in?%>
-        <%=erb :'footers/footer_out'%>
-      <% else %>
-        <%=erb :'footers/footer_in'%>
-      <%end%>
+    <%if !logged_in?%>
+      <%=erb :'headers/header_out'%>
+    <% else %>
+      <%=erb :'headers/header_in'%>
+    <%end%>
+
+    <%=yield%>
+
+    <%if !logged_in?%>
+      <%=erb :'footers/footer_out'%>
+    <% else %>
+      <%=erb :'footers/footer_in'%>
+    <%end%>
   </body>
 </html>
