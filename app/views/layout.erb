@@ -19,7 +19,9 @@
       <%=erb :'headers/header_in'%>
     <%end%>
 
-    <%=yield%>
+    <div id="content-wrapper">
+      <%=yield%>
+    </div>
 
     <%if !logged_in?%>
       <%=erb :'footers/footer_out'%>
