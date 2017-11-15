@@ -94,6 +94,7 @@ div.list-divs {
 div.list-divs h4,
 div.list-divs p {
   text-align: left;
+  color: rgba(0,0,0,0.7);
 }
 
 div.list-divs:last-child {

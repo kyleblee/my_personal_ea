@@ -8,16 +8,18 @@
   </div>
 
   <div class="main-wrappers interaction-wrapper">
-    <h3>Most Recent Interactions</h3>
+    <h3>Contacts</h3>
 
-    <% current_user.last_interactions.each do |interaction| %>
+    <% current_user.contacts.each do |contact| %>
       <div class="list-divs interactions-list">
-        <h4 class="list-titles"><a href="/contacts/<%=interaction.contact.id%>"><%=interaction.contact.name%></a></h4>
-        <p class="list-info"><%=interaction.date%></p>
-        <p class="list-info"><a href="/interactions/<%=interaction.id%>"><%=interaction.details%></a></p>
-        <p>CHANGE ME!</p>
+        <h4 class="list-titles"><a href="/contacts/<%=contact.id%>"><%=contact.name%></a> <%if contact.category%><%="(#{contact.category})"%><%end%></h4>
+        <%if contact.location%><p class="list-info">Location: <%=contact.location%></p><%end%>
+        <%if contact.email%><p class="list-info"><%=contact.email%></p><%end%>
+        <%if contact.phone_number%><p class="list-info"><%=contact.phone_number%></a></p><%end%>
+        <%if contact.expertise%><p class="list-info">Expertise: <%=contact.expertise%></a></p><%end%>
+        <%if contact.preferences%><p class="list-info">Preferences: <%=contact.preferences%></a></p><%end%>
       </div>
     <% end %>
-    
+
   </div>
 </section>

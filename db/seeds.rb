@@ -27,3 +27,9 @@ vic.last_interactions << dinner_on_saturday
 joe.last_interactions << driving
 matt.last_interactions << last_day_at_redpeg
 justin.last_interactions << weekend_at_the_lake
+
+celia.location = "Paeonian Springs"
+vic.email = "vic@gmail.com"
+joe.phone_number = "(111) 111-1111"
+matt.expertise = "Brand Strategy, business development, taste in alcohol, soccer."
+sara.preferences = "Vodka and having a good time."
