@@ -83,7 +83,7 @@ nav a:hover {
 div.homepage-main {
   background: url(../img/croatia_coast.jpg) center center;
   background-size: cover;
-  height: 1300px; /*add back if not working*/
+  height: 1300px;
 }
 
 div.homepage-main h1 {
@@ -123,11 +123,13 @@ section.homepage-section {
 .homepage-section h2 {
   text-align: center;
   margin-top: 50px;
+  color: rgba(0,0,0,0.7);
 }
 
 .homepage-section p {
   text-align: center;
   margin-top: 5px;
+  color: rgba(0,0,0,0.7);
 }
 
 .option-lockup {
@@ -151,6 +153,10 @@ section.homepage-section {
 
 .buttons:hover {
   box-shadow: 0 4px 2px 0 rgba(253, 232, 205, 1);
+}
+
+.interaction-wrapper h4 {
+  color: rgba(0,0,0,0.7);
 }
 
 /*****FOOTER*****/
