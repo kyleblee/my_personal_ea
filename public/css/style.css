@@ -145,7 +145,7 @@ section.homepage-section {
   height: 50px;
   cursor: pointer;
   border-radius: 12px;
-  font-weight: 700;
+  font-weight: 400;
   color: white;
   padding: 10px;
   background-color: rgb(138,95,119);
@@ -157,6 +157,7 @@ section.homepage-section {
 
 .interaction-wrapper h4 {
   color: rgba(0,0,0,0.7);
+  margin-top: 30px;
 }
 
 /*****FOOTER*****/
