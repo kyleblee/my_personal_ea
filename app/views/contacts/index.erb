@@ -1,24 +1,23 @@
 <section class="info-sections contacts-section">
   <div class="profile-picture"></div>
   <h2><%=current_user.username%>'s contacts</h2>
-  <p>Let's connect with some contacts.</p>
+  <p>They certainly are interesting characters...</p>
 
   <div class="option-lockup">
-    <a href="/interactions/new"><button class="buttons" id="add-interaction-button">Log a recent interaction</button></a>
     <a href="/contacts/new"><button class="buttons" id="create-contact-button">Create a new contact</button></a>
-    <a href="/plans/new"><button class="buttons" id="make-plan-button">Make a new plan</button></a>
   </div>
 
-  <div class="interaction-wrapper">
+  <div class="main-wrappers interaction-wrapper">
     <h3>Most Recent Interactions</h3>
 
-    <% @ordered_interactions.each do |interaction| %>
+    <% current_user.last_interactions.each do |interaction| %>
       <div class="list-divs interactions-list">
         <h4 class="list-titles"><a href="/contacts/<%=interaction.contact.id%>"><%=interaction.contact.name%></a></h4>
         <p class="list-info"><%=interaction.date%></p>
         <p class="list-info"><a href="/interactions/<%=interaction.id%>"><%=interaction.details%></a></p>
+        <p>CHANGE ME!</p>
       </div>
     <% end %>
-
+    
   </div>
 </section>

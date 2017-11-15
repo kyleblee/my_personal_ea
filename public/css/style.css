@@ -42,6 +42,65 @@ a {
   margin: 0 auto 0;
 }
 
+.buttons { /*remove once working in universal class*/
+  width: 125px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: 400;
+  color: white;
+  padding: 10px;
+  background-color: rgb(138,95,119);
+}
+
+
+/*****MAIN INFORMATION SECTIONS*****/
+
+section.info-sections {
+  max-width: 70%;
+  margin: 50px auto 0;
+}
+
+.info-sections h2 {
+  text-align: center;
+  margin-top: 15px;
+  color: rgba(0,0,0,0.7);
+}
+
+.info-sections p {
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.info-sections h2 ~ p {
+  text-align: center;
+}
+
+.main-wrappers {
+  margin-top: 60px;
+}
+
+.main-wrappers h3 {
+  color: rgba(0,0,0,0.7);
+  font-style: italic;
+}
+
+div.list-divs {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid black;
+}
+
+div.list-divs h4,
+div.list-divs p {
+  text-align: left;
+}
+
+div.list-divs:last-child {
+  border-bottom: 0;
+}
+
+
 /*****HEADERS*****/
 
 header {
@@ -82,6 +141,7 @@ nav a:hover {
   color: rgba(0, 0, 0, 1);
 }
 
+
 /*****HOMEPAGE (logged out)*****/
 
 div.homepage-main {
@@ -117,23 +177,8 @@ div.homepage-main p.kicker {
   line-height: 1;
 }
 
+
 /*****USER HOMEPAGE (logged in)*****/
-
-section.homepage-section {
-  max-width: 70%;
-  margin: 50px auto 0;
-}
-
-.homepage-section h2 {
-  text-align: center;
-  margin-top: 15px;
-  color: rgba(0,0,0,0.7);
-}
-
-.homepage-section p {
-  margin-top: 5px;
-  line-height: 1.5;
-}
 
 .option-lockup {
   display: flex;
@@ -143,44 +188,6 @@ section.homepage-section {
   justify-content: space-around;
 }
 
-.buttons {
-  width: 125px;
-  height: 50px;
-  cursor: pointer;
-  border-radius: 12px;
-  font-weight: 400;
-  color: white;
-  padding: 10px;
-  background-color: rgb(138,95,119);
-}
-
-.interaction-wrapper {
-  margin-top: 60px;
-}
-
-.interaction-wrapper h3 {
-  color: rgba(0,0,0,0.7);
-  font-style: italic;
-}
-
-div.list-divs {
-  margin-top: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid black;
-}
-
-div.list-divs h4,
-div.list-divs p {
-  text-align: left;
-}
-
-div.list-divs:last-child {
-  border-bottom: 0;
-}
-
-.homepage-section h2 ~ p {
-  text-align: center;
-}
 
 /*****FOOTER*****/
 
@@ -223,6 +230,7 @@ footer nav a {
 footer nav a:first-child {
   margin-left: 0;
 }
+
 
 /*****FORMS (GENERAL)*****/
 
@@ -285,6 +293,7 @@ form.form-body input.submit-button:hover {
   color: rgb(138,95,119);
   margin: 20px 0 -15px;
 }
+
 
 /*****LOGIN FORM*****/
 
