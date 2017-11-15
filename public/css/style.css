@@ -155,30 +155,30 @@ footer nav a:first-child {
   margin-left: 0;
 }
 
-/*****SIGN UP PAGE*****/
+/*****FORMS (GENERAL)*****/
 
-h1.sign-up {
+.form-headers {
   margin: 50px auto 0;
   text-align: center;
   text-transform: uppercase;
   color: rgba(0,0,0,0.7);
 }
 
-form.sign-up {
+.form-body {
   max-width: 450px;
   margin: 20px auto 0;
 }
 
-form.sign-up label {
+form.form-body label {
   display: block;
   margin-top: 20px;
   margin-bottom: 4px;
   box-sizing: border-box;
   font-weight: 700;
-  color: rgb(138,95,119);
+  color: rgba(0,0,0,0.7);
 }
 
-form.sign-up input {
+form.form-body input {
   border: 3px solid rgb(138,95,119);
   width: 100%;
   box-sizing: border-box;
@@ -186,30 +186,28 @@ form.sign-up input {
   font-size: 1.15em;
 }
 
-form.sign-up input:focus {
+form.form-body input:focus {
   outline: none;
   border-color: rgb(253, 232, 205);
 }
 
-form.sign-up label span {
+form.form-body label span {
   display: block;
 }
 
-form.sign-up label span {
-  display: block;
-}
-
-form.sign-up input.submit-button {
+form.form-body input.submit-button {
   display: block;
   border: 0;
   margin-top: 20px;
   background-color: rgb(253, 232, 205);
   padding: 10px;
   font-weight: 700;
+  color: rgba(0,0,0,0.7);
 }
 
-form.sign-up input.submit-button:hover {
+form.form-body input.submit-button:hover {
   cursor: pointer;
+  background: rgba(253, 232, 205, 0.5);
 }
 
 #error-message {

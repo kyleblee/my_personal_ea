@@ -1,10 +1,10 @@
-<h1 class="sign-up">Sign Up</h1>
+<h1 class="form-headers">Sign Up</h1>
 
 <% if flash.has?(:message)%>
   <p id="error-message"><%=flash[:message]%></p>
 <% end %>
 
-<form class="sign-up" action="/users" method="post">
+<form class="form-body" action="/users" method="post">
   <label for="username"><span>Username</span></label>
   <input id="username" type="text" name="username">
 
