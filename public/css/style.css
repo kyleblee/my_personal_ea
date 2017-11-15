@@ -116,7 +116,7 @@ div.homepage-main p.kicker {
 /*****USER HOMEPAGE (logged in)*****/
 
 section.homepage-section {
-  max-width: 85%;
+  max-width: 70%;
   margin: 50px auto 0;
 }
 
@@ -135,7 +135,7 @@ section.homepage-section {
 .option-lockup {
   display: flex;
   margin: 25px auto 0;
-  width: 50%;
+  width: 62%;
   align-items: center;
   justify-content: space-around;
 }
@@ -155,9 +155,31 @@ section.homepage-section {
   box-shadow: 0 4px 2px 0 rgba(253, 232, 205, 1);
 }
 
-.interaction-wrapper h4 {
+.interaction-wrapper {
+  /*background: pink;*/
+}
+
+.interaction-wrapper h3 {
   color: rgba(0,0,0,0.7);
   margin-top: 30px;
+}
+
+div.list-divs {
+  margin-top: 30px;
+}
+
+div.list-divs h4,
+div.list-divs p {
+  text-align: left;
+}
+
+div.list-divs .list-lines {
+  border: 0;
+  height: 1px;
+  color: black;
+  background-color: black;
+  margin: 30px auto 0;
+  width: 100%;
 }
 
 /*****FOOTER*****/

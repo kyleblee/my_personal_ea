@@ -59,8 +59,11 @@ class UsersController < ApplicationController
   end
 
   get '/users/home' do
-    @user = current_user
-    erb :'users/index'
+    if logged_in?
+      @user = current_user
+      @ordered_interactions = @user.last_interactions.sort_by {|interaction| interaction.id}.reverse
+      erb :'users/index'
+    end
   end
 
   get '/users/logout' do

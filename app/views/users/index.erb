@@ -8,16 +8,16 @@
   </div>
 
   <div class="interaction-wrapper">
-    <h4>Most Recent Interactions</h4>
+    <h3>Most Recent Interactions</h3>
 
-    <% LastInteraction.all.each do |interaction| %>
-      <%binding.pry%>
-      <% if interaction.contact_id == current_user.id %>
-
-      <% end %>
+    <% @ordered_interactions.each do |interaction| %>
       <div class="list-divs interactions-list">
-        <h4></h4>
+        <h4 class="list-titles"><%=interaction.contact.name%></h4>
+        <p class="list-info"><%=interaction.date%></p>
+        <p class="list-info"><%=interaction.details%></p>
+        <hr class="list-lines">
       </div>
     <% end %>
+
   </div>
 </section>
