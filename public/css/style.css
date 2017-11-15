@@ -28,15 +28,24 @@ body {
   flex: 1 0 auto; /*remove back if not working*/
 }
 
+a {
+  text-decoration: none;
+  color: rgba(0,0,0,0.7);
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: url(../img/chaos_abstract.jpg) center center;
+  background-size: cover;
+  margin: 0 auto 0;
+}
+
 /*****HEADERS*****/
 
 header {
   background: rgba(253, 232, 205, 0.5);
-}
-
-div.logo a {
-  text-decoration: none;
-  color: rgba(0,0,0,0.7);
 }
 
 header div.logo p {
@@ -59,11 +68,6 @@ header nav {
   font-size: 14px;
   text-transform: uppercase;
   float: right;
-}
-
-nav a {
-  text-decoration: none;
-  color: rgba(0,0,0,0.7);
 }
 
 header nav a {
@@ -122,14 +126,13 @@ section.homepage-section {
 
 .homepage-section h2 {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 15px;
   color: rgba(0,0,0,0.7);
 }
 
 .homepage-section p {
-  text-align: center;
   margin-top: 5px;
-  color: rgba(0,0,0,0.7);
+  line-height: 1.5;
 }
 
 .option-lockup {
@@ -151,21 +154,19 @@ section.homepage-section {
   background-color: rgb(138,95,119);
 }
 
-.buttons:hover {
-  box-shadow: 0 4px 2px 0 rgba(253, 232, 205, 1);
-}
-
 .interaction-wrapper {
-  /*background: pink;*/
+  margin-top: 60px;
 }
 
 .interaction-wrapper h3 {
   color: rgba(0,0,0,0.7);
-  margin-top: 30px;
+  font-style: italic;
 }
 
 div.list-divs {
   margin-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid black;
 }
 
 div.list-divs h4,
@@ -173,13 +174,12 @@ div.list-divs p {
   text-align: left;
 }
 
-div.list-divs .list-lines {
-  border: 0;
-  height: 1px;
-  color: black;
-  background-color: black;
-  margin: 30px auto 0;
-  width: 100%;
+div.list-divs:last-child {
+  border-bottom: 0;
+}
+
+.homepage-section h2 ~ p {
+  text-align: center;
 }
 
 /*****FOOTER*****/
@@ -296,6 +296,5 @@ form.form-body input.submit-button:hover {
 }
 
 #new-to-ea-kicker a {
-  text-decoration: none;
   color: rgb(138,95,119);
 }

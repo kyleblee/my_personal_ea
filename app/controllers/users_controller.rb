@@ -63,6 +63,8 @@ class UsersController < ApplicationController
       @user = current_user
       @ordered_interactions = @user.last_interactions.sort_by {|interaction| interaction.id}.reverse
       erb :'users/index'
+    else
+      redirect '/users/login'
     end
   end
 

@@ -1,10 +1,12 @@
-<section class="homepage-section">
-  <h2>Welcome, <%=@user.username%>.</h2>
+<section class="info-sections homepage-section">
+  <div class="profile-picture"></div>
+  <h2>Welcome, <%=@user.username%></h2>
   <p>Let's connect with some contacts.</p>
+
   <div class="option-lockup">
-    <a href="/interactions/new"><button class="buttons" id="add-interaction-button">Add a new interaction.</button></a>
-    <a href="/contacts/new"><button class="buttons" id="create-contact-button">Create a new contact.</button></a>
-    <a href="/plans/new"><button class="buttons" id="make-plan-button">Make a new plan.</button></a>
+    <a href="/interactions/new"><button class="buttons" id="add-interaction-button">Log a recent interaction</button></a>
+    <a href="/contacts/new"><button class="buttons" id="create-contact-button">Create a new contact</button></a>
+    <a href="/plans/new"><button class="buttons" id="make-plan-button">Make a new plan</button></a>
   </div>
 
   <div class="interaction-wrapper">
@@ -12,10 +14,9 @@
 
     <% @ordered_interactions.each do |interaction| %>
       <div class="list-divs interactions-list">
-        <h4 class="list-titles"><%=interaction.contact.name%></h4>
+        <h4 class="list-titles"><a href="/contacts/<%=interaction.contact.id%>"><%=interaction.contact.name%></a></h4>
         <p class="list-info"><%=interaction.date%></p>
-        <p class="list-info"><%=interaction.details%></p>
-        <hr class="list-lines">
+        <p class="list-info"><a href="/interactions/<%=interaction.id%>"><%=interaction.details%></a></p>
       </div>
     <% end %>
 
