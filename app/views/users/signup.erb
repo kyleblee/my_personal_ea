@@ -1,7 +1,7 @@
 <h1 class="sign-up">Sign Up</h1>
 
 <% if flash.has?(:message)%>
-  <%=flash[:message]%>
+  <p id="error-message"><%=flash[:message]%></p>
 <% end %>
 
 <form class="sign-up" action="/users" method="post">

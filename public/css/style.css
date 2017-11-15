@@ -160,27 +160,35 @@ footer nav a:first-child {
 h1.sign-up {
   margin: 50px auto 0;
   text-align: center;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.7);
 }
 
 form.sign-up {
   max-width: 450px;
-  margin: 50px auto 0;
+  margin: 20px auto 0;
 }
 
 form.sign-up label {
   display: block;
   margin-top: 20px;
+  margin-bottom: 4px;
+  box-sizing: border-box;
+  font-weight: 700;
+  color: rgb(138,95,119);
 }
 
-form.sign-up input,
-form.sign-up textarea {
-  border: 3px solid rgb(135,95,119);
-  width: 40%;
-  138	95	119
+form.sign-up input {
+  border: 3px solid rgb(138,95,119);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 1.15em;
 }
 
-form.signup input:focus {
-  99	46	73
+form.sign-up input:focus {
+  outline: none;
+  border-color: rgb(253, 232, 205);
 }
 
 form.sign-up label span {
@@ -195,4 +203,18 @@ form.sign-up input.submit-button {
   display: block;
   border: 0;
   margin-top: 20px;
+  background-color: rgb(253, 232, 205);
+  padding: 10px;
+  font-weight: 700;
+}
+
+form.sign-up input.submit-button:hover {
+  cursor: pointer;
+}
+
+#error-message {
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(138,95,119);
+  margin: 20px 0 -15px;
 }
