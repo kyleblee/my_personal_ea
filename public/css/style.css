@@ -115,7 +115,43 @@ div.homepage-main p.kicker {
 
 /*****USER HOMEPAGE (logged in)*****/
 
+section.homepage-section {
+  max-width: 85%;
+  margin: 50px auto 0;
+}
 
+.homepage-section h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.homepage-section p {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.option-lockup {
+  display: flex;
+  margin: 25px auto 0;
+  width: 50%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.buttons {
+  width: 125px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: 700;
+  color: white;
+  padding: 10px;
+  background-color: rgb(138,95,119);
+}
+
+.buttons:hover {
+  box-shadow: 0 4px 2px 0 rgba(253, 232, 205, 1);
+}
 
 /*****FOOTER*****/
 

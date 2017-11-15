@@ -1,1 +1,13 @@
-<h1>Welcome, <%=@user.username%></h1>
+<section class="homepage-section">
+  <h2>Welcome, <%=@user.username%>.</h2>
+  <p>Let's connect with some contacts.</p>
+  <div class="option-lockup">
+    <a href="/interactions/new"><button class="buttons" id="add-interaction-button">Add a new interaction.</button></a>
+    <a href="/contacts/new"><button class="buttons" id="create-contact-button">Create a new contact.</button></a>
+    <a href="/plans/new"><button class="buttons" id="make-plan-button">Make a new plan.</button></a>
+  </div>
+
+  <div class="interaction-wrapper">
+    <h5>Most Recent Interactions</h5>
+  </div>
+</section>
