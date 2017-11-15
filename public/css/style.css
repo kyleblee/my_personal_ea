@@ -154,3 +154,45 @@ footer nav a {
 footer nav a:first-child {
   margin-left: 0;
 }
+
+/*****SIGN UP PAGE*****/
+
+h1.sign-up {
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+form.sign-up {
+  max-width: 450px;
+  margin: 50px auto 0;
+}
+
+form.sign-up label {
+  display: block;
+  margin-top: 20px;
+}
+
+form.sign-up input,
+form.sign-up textarea {
+  border: 3px solid rgb(135,95,119);
+  width: 40%;
+  138	95	119
+}
+
+form.signup input:focus {
+  99	46	73
+}
+
+form.sign-up label span {
+  display: block;
+}
+
+form.sign-up label span {
+  display: block;
+}
+
+form.sign-up input.submit-button {
+  display: block;
+  border: 0;
+  margin-top: 20px;
+}
