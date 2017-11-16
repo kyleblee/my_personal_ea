@@ -1,0 +1,32 @@
+<h1 class="form-headers">Edit Contact</h1>
+
+<% if flash.has?(:message)%>
+  <p id="error-message"><%=flash[:message]%></p>
+<% end %>
+
+<form class="form-body" action="/contacts/<%=@contact.id%>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+
+  <label for="name"><span>Name</span></label>
+  <input id="name" type="text" name="name" value="<%=@contact.name%>">
+
+  <label for="location"><span>Location</span></label>
+  <input id="location" type="text" name="location" value="<%=@contact.location%>">
+
+  <label for="email"><span>Email</span></label>
+  <input id="email" type="text" name="email" value="<%=@contact.email%>">
+
+  <label for="phone_number"><span>Phone Number</span></label>
+  <input id="phone_number" type="text" name="phone_number" value="<%=@contact.phone_number%>">
+
+  <label for="category"><span>Category</span></label>
+  <input id="category" type="text" name="category" value="<%=@contact.category%>">
+
+  <label for="expertise"><span>Expertise</span></label>
+  <input id="expertise" type="text" name="expertise" value="<%=@contact.expertise%>">
+
+  <label for="preferences"><span>Preferences</span></label>
+  <input id="preferences" type="text" name="preferences" value="<%=@contact.preferences%>">
+
+  <input class="submit-button" type="submit" value="Update contact">
+</form>

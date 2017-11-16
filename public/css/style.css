@@ -200,7 +200,8 @@ div.homepage-main p.kicker {
 }
 
 #main-view-message {
-  margin: 20px 0 -20px 30px;
+  text-align: center;
+  margin: 20px auto 30px;
   text-transform: uppercase;
   color: rgb(138,95,119);
   font-weight: 700;
