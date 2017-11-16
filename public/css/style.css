@@ -207,6 +207,10 @@ div.homepage-main p.kicker {
   font-weight: 700;
 }
 
+h3#most-recent-header + div.list-divs {
+  margin-top: 30px;
+}
+
 /*****CONTACTS VIEW*****/
 
 .contacts-buttons {
@@ -362,4 +366,28 @@ div.main-wrappers div.user-show-div button.delete-buttons {
 
 div.main-wrappers h3 ~ p.list-info {
  margin-top: 13px;
+}
+
+/*****CONTACTS SHOW PAGE*****/
+
+#show-view-div {
+  margin-top: 15px;
+  border-bottom: 0;
+}
+
+.contact-show-interactions {
+  margin-top: 20px;
+}
+
+.contact-show-interactions h4 {
+  font-style: italic;
+}
+
+.contact-show-interactions div.list-divs {
+  margin-top: 15px;
+  padding-bottom: 15px;
+}
+
+.contact-show-interactions h4 + div.list-divs {
+  margin-top: 25px;
 }

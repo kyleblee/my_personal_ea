@@ -80,4 +80,14 @@ class ContactsController < ApplicationController
     @contact.delete
     redirect '/contacts'
   end
+
+  get '/contacts/:id' do
+    @contact = Contact.find_by_id(params[:id])
+    @ordered_interactions = @contact.last_interactions.sort_by {|interaction| interaction.id}.reverse
+    if logged_in? && @contact.user_id == current_user.id
+      erb :'contacts/show'
+    else
+      redirect '/users/login'
+    end
+  end
 end

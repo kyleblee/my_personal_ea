@@ -1,0 +1,31 @@
+<section class="info-sections">
+
+  <div class="main-wrappers interaction-wrapper">
+    <h3><%=@contact.name%> <%if @contact.category%><%="(#{@contact.category})"%><%end%></h3>
+
+    <div class="user-show-div list-divs">
+      <div id="show-view-div" class="list-divs interactions-list">
+        <%if @contact.location%><p class="list-info">Location: <%=@contact.location%></p><%end%>
+        <%if @contact.email%><p class="list-info"><%=@contact.email%></p><%end%>
+        <%if @contact.phone_number%><p class="list-info"><%=@contact.phone_number%></a></p><%end%>
+        <%if @contact.expertise%><p class="list-info">Expertise: <%=@contact.expertise%></a></p><%end%>
+        <%if @contact.preferences%><p class="list-info">Preferences: <%=@contact.preferences%></a></p><%end%>
+        <%if !@contact.last_interactions.empty?%><p class="list-info">Last Interaction was on: <%=@contact.last_interactions.last.date%></a></p><%end%>
+        <a href="/interactions/new/<%=@contact.id%>"><button class="first-contact-button buttons contacts-buttons">New Interaction</button></a>
+        <a href="/contacts/<%=@contact.id%>/edit"><button class="buttons contacts-buttons">Edit Contact</button></a>
+        <a href="/contacts/<%=@contact.id%>/delete"><button class="buttons contacts-buttons">Delete Contact</button></a>
+      </div>
+      <div class="contact-show-interactions">
+        <h4>Interactions with <%=@contact.name%></h4>
+        <% @ordered_interactions.each do |interaction| %>
+          <div class="list-divs interactions-list">
+            <h4 class="list-titles"><a href="/contacts/<%=interaction.contact.id%>"><%=interaction.contact.name%></a></h4>
+            <p class="list-info"><%=interaction.date%></p>
+            <p class="list-info"><a href="/interactions/<%=interaction.id%>"><%=interaction.details%></a></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</section>
