@@ -78,9 +78,5 @@ class UsersController < ApplicationController
     def username_taken?(params)
       User.all.detect {|user| params[:username] == user.username}
     end
-
-    def valid_email?(params)
-      params[:email] =~ /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
-    end
   end
 end

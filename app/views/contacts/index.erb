@@ -18,6 +18,9 @@
         <%if contact.phone_number%><p class="list-info"><%=contact.phone_number%></a></p><%end%>
         <%if contact.expertise%><p class="list-info">Expertise: <%=contact.expertise%></a></p><%end%>
         <%if contact.preferences%><p class="list-info">Preferences: <%=contact.preferences%></a></p><%end%>
+        <%if !contact.last_interactions.empty?%><p class="list-info">Last Interaction was on: <%=contact.last_interactions.last.date%></a></p><%end%>
+        <a href="/contacts/<%=contact.id%>/edit"><button class="first-contact-button buttons contacts-buttons">Edit Contact</button></a>
+        <a href="/contacts/<%=contact.id%>/delete"><button class="buttons contacts-buttons">Delete Contact</button></a>
       </div>
     <% end %>
 
