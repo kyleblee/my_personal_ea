@@ -58,6 +58,10 @@ a {
   outline: 0;
 }
 
+.emphasize {
+  font-weight: 700;
+}
+
 
 /*****MAIN INFORMATION SECTIONS*****/
 
@@ -91,8 +95,8 @@ section.info-sections {
 }
 
 div.list-divs {
-  margin-top: 30px;
-  padding-bottom: 30px;
+  margin-top: 50px;
+  padding-bottom: 50px;
   border-bottom: 1px solid black;
 }
 
@@ -195,10 +199,18 @@ div.homepage-main p.kicker {
   justify-content: space-around;
 }
 
+#homepage-message {
+  margin: 20px auto -30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(138,95,119);
+  font-weight: 700;
+}
+
 /*****CONTACTS VIEW*****/
 
 .contacts-buttons {
-  margin: 10px 0 0 20px;
+  margin: 15px 0 0 20px;
 }
 
 div.list-divs button.first-contact-button {
@@ -333,4 +345,21 @@ form.form-body input.submit-button:hover {
 
 div.user-show-div {
   margin-top: 20px;
+}
+
+/*****DELETE VIEW*****/
+
+div.main-wrappers div.user-show-div form input.delete-buttons {
+  float: left;
+  margin-top: 0;
+}
+
+div.main-wrappers div.user-show-div button.delete-buttons {
+  float: left;
+  margin-left: 20px;
+  margin-top: 0;
+}
+
+div.main-wrappers h3 ~ p.list-info {
+ margin-top: 13px;
 }

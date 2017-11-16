@@ -1,0 +1,16 @@
+<section class="info-sections">
+
+  <div class="main-wrappers interaction-wrapper">
+    <h3>Delete?</h3>
+    <p class="list-info">Are you sure you want to delete <span class="emphasize"><%=@contact.name%></span> from your contacts?</p>
+
+    <div class="user-show-div list-divs">
+      <form action="/contacts" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input class="users-show-buttons buttons delete-buttons" type="submit" value="Yes">
+      </form>
+      <a href="/users/<%=current_user.id%>"><button class="users-show-buttons buttons delete-buttons">No</button></a>
+    </div>
+
+  </div>
+</section>
