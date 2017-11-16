@@ -73,6 +73,14 @@ class UsersController < ApplicationController
     redirect '/users/login'
   end
 
+  get '/users/:id' do
+    if logged_in?
+      @user = User.find_by_id(params[:id])
+      erb :'users/show'
+    else
+      redirect '/users/login'
+    end
+  end
 
   helpers do
     def username_taken?(params)

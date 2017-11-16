@@ -34,4 +34,13 @@ class ContactsController < ApplicationController
       end
     end
   end
+
+  get '/contacts/:id/delete' do
+    if logged_in?
+      @contact = Contact.find_by_id(params[:id])
+      erb :'contacts/delete'
+    else
+      redirect '/users/login'
+    end
+  end
 end

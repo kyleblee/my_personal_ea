@@ -25,7 +25,7 @@ body {
 }
 
 #content-wrapper {
-  flex: 1 0 auto; /*remove back if not working*/
+  flex: 1 0 auto;
 }
 
 a {
@@ -42,7 +42,7 @@ a {
   margin: 0 auto 0;
 }
 
-.buttons { /*remove once working in universal class*/
+.buttons {
   width: 125px;
   height: 50px;
   cursor: pointer;
@@ -195,6 +195,8 @@ div.homepage-main p.kicker {
   justify-content: space-around;
 }
 
+/*****CONTACTS VIEW*****/
+
 .contacts-buttons {
   margin: 10px 0 0 20px;
 }
@@ -321,4 +323,14 @@ form.form-body input.submit-button:hover {
 
 #new-to-ea-kicker a {
   color: rgb(138,95,119);
+}
+
+/*****USERS SHOW VIEW*****/
+
+.users-show-buttons {
+  margin: 20px 0 0 0;
+}
+
+div.user-show-div {
+  margin-top: 20px;
 }

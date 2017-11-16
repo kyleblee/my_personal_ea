@@ -1,0 +1,14 @@
+<section class="info-sections contacts-section">
+
+  <div class="main-wrappers interaction-wrapper">
+    <h3><%=@user.username%></h3>
+
+    <div class="user-show-div list-divs">
+      <p class="list-info">Number of Contacts: <%=@user.contacts.length%></p>
+      <p class="list-info">Number of Interactions: <%=@user.last_interactions.length%></p>
+      <p class="list-info">Number of Plans: <%=@user.plans.length%></p>
+      <%if @user.id == current_user.id%><a href="/users/<%=current_user.id%>/edit"><button class="users-show-buttons buttons">Edit Info</button></a><%end%>
+    </div>
+
+  </div>
+</section>
