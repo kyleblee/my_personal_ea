@@ -82,10 +82,6 @@ class UsersController < ApplicationController
     end
   end
 
-  delete '/contacts' do
-    "You've reached delete"
-  end
-
   helpers do
     def username_taken?(params)
       User.all.detect {|user| params[:username] == user.username}

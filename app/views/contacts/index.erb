@@ -1,3 +1,7 @@
+<% if flash.has?(:message)%>
+  <p id="main-view-message"><%=flash[:message]%></p>
+<% end %>
+
 <section class="info-sections contacts-section">
   <div class="profile-picture"></div>
   <h2><%=current_user.username%>'s contacts</h2>
