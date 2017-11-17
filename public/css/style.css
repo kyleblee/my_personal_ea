@@ -391,3 +391,30 @@ div.main-wrappers h3 ~ p.list-info {
 .contact-show-interactions h4 + div.list-divs {
   margin-top: 25px;
 }
+
+/*****NEW INTERACTION*****/
+
+textarea#details {
+  height: 160px;
+  border: 3px solid rgb(138,95,119);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 1.15em;
+  resize: none;
+}
+
+textarea#details:focus {
+  outline: none;
+  border-color: rgb(253, 232, 205);
+}
+
+form#interactions-form input.contact-radio {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+}
+
+label#new-contact-interaction {
+  margin-top: 10px;
+}

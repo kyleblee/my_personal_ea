@@ -1,0 +1,26 @@
+<h1 class="form-headers">New Interaction</h1>
+
+<% if flash.has?(:message)%>
+  <p id="error-message"><%=flash[:message]%></p>
+<% end %>
+
+<form id="interactions-form" class="form-body" action="/interactions" method="post">
+  <label><span>Contact Name</span></label>
+  <%if current_user.contacts.empty?%>
+    <input id="contact_name" type="text" name="contact_name">
+  <% else %>
+    <%current_user.contacts.each do |contact|%>
+      <input class="contact-radio" type="radio" name="contact_name" value="<%=contact.name%>" <%='checked' if @contact && @contact.name == contact.name%>><%=contact.name%></input>
+    <% end %>
+    <label for="new_contact_name" id="new-contact-interaction"><span>Or, add a new contact for this interaction:</span></label>
+    <input id="new_contact_name" type="text" name="new_contact_name">
+  <% end %>
+
+  <label for="date"><span>Interaction Date</span></label>
+  <input id="date" type="text" name="date">
+
+  <label for="details"><span>Details</span></label>
+  <textarea id="details" name="details" form="interactions-form"></textarea>
+
+  <input class="submit-button" type="submit" value="Log Interaction">
+</form>
