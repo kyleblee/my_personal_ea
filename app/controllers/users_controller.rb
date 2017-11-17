@@ -107,6 +107,25 @@ class UsersController < ApplicationController
     end
   end
 
+  get '/users/:id/delete' do
+    if logged_in? && current_user.id == params[:id].to_i
+      erb :'users/delete'
+    else
+      redirect '/users/login'
+    end
+  end
+
+  delete '/users/:id' do
+    if logged_in? && current_user.id == params[:id].to_i
+      @user = current_user
+      @user.delete
+      flash[:message] = "Your account was successfully deleted."
+      redirect '/users/logout'
+    else
+      redirect '/users/login'
+    end
+  end
+
   helpers do
     def username_taken?(params)
       User.all.detect {|user| params[:username] == user.username}

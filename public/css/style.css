@@ -351,6 +351,10 @@ div.user-show-div {
   margin-top: 20px;
 }
 
+button#delete-account-button {
+  margin-left: 20px;
+}
+
 /*****DELETE VIEW*****/
 
 div.main-wrappers div.user-show-div form input.delete-buttons {

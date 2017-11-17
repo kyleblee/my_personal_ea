@@ -17,6 +17,7 @@
       </div>
       <div class="contact-show-interactions">
         <h4>Interactions with <%=@contact.name%></h4>
+        <% if @contact.last_interactions.empty? %><p class="list-info">You haven't created any interactions with this contact, yet!</p> <% end %>
         <% @ordered_interactions.each do |interaction| %>
           <div class="list-divs interactions-list">
             <h4 class="list-titles"><a href="/contacts/<%=interaction.contact.id%>"><%=interaction.contact.name%></a></h4>

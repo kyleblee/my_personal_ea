@@ -12,6 +12,7 @@
       <p class="list-info">Number of Interactions: <%=@user.last_interactions.length%></p>
       <p class="list-info">Number of Plans: <%=@user.plans.length%></p>
       <%if @user.id == current_user.id%><a href="/users/<%=current_user.id%>/edit"><button class="users-show-buttons buttons">Edit Info</button></a><%end%>
+      <%if @user.id == current_user.id%><a href="/users/<%=current_user.id%>/delete"><button id="delete-account-button" class="users-show-buttons buttons">Delete account</button></a><%end%>
     </div>
 
   </div>

@@ -14,6 +14,7 @@
   <div class="main-wrappers">
     <h3>Contacts</h3>
 
+    <% if current_user.contacts.empty? %><p class="list-info">You haven't created any contacts, yet!</p> <% end %>
     <% current_user.contacts.each do |contact| %>
       <div class="list-divs interactions-list">
         <h4 class="list-titles"><a href="/contacts/<%=contact.id%>"><%=contact.name%></a> <%if contact.category%><%="(#{contact.category})"%><%end%></h4>
