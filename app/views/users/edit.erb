@@ -1,0 +1,17 @@
+<h1 class="form-headers">Your Information</h1>
+
+<% if flash.has?(:message)%>
+  <p id="error-message"><%=flash[:message]%></p>
+<% end %>
+
+<form class="form-body" action="/users/<%=current_user.id%>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+
+  <label for="username"><span>Username</span></label>
+  <input id="username" type="text" name="username" value="<%=current_user.username%>">
+
+  <label for="email"><span>Email</span></label>
+  <input id="email" type="text" name="email" value="<%=current_user.email%>">
+
+  <input class="submit-button" type="submit" value="Update information">
+</form>

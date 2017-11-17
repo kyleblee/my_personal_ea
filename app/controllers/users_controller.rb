@@ -73,6 +73,31 @@ class UsersController < ApplicationController
     redirect '/users/login'
   end
 
+  get '/users/:id/edit' do
+    if logged_in? && current_user.id == params[:id].to_i
+      @user = current_user
+      erb :'users/edit'
+    else
+      redirect '/users/login'
+    end
+  end
+
+  patch '/users/:id' do
+    @user = current_user
+    if params[:username].empty?
+      flash[:message] = "Please enter a username."
+      redirect "/users/#{@user.id}/edit"
+    elsif username_taken?(params) && @user.username != params[:username]
+      flash[:message] = "This username is already being used. Please try again."
+      redirect "/users/#{@user.id}/edit"
+    else
+      params[:email] = nil if params[:email] == ""
+      @user.update(username: params[:username], email: params[:email])
+      flash[:message] = "Information updated."
+      redirect "/users/#{@user.id}"
+    end
+  end
+
   get '/users/:id' do
     if logged_in?
       @user = User.find_by_id(params[:id])

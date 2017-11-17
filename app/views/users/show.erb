@@ -1,3 +1,7 @@
+<% if flash.has?(:message)%>
+  <p id="main-view-message"><%=flash[:message]%></p>
+<% end %>
+
 <section class="info-sections">
 
   <div class="main-wrappers interaction-wrapper">
