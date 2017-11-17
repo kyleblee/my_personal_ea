@@ -42,4 +42,13 @@ class InteractionsController < ApplicationController
       redirect "/users/home"
     end
   end
+
+  get '/interactions/:id' do
+    @interaction = LastInteraction.find_by_id(params[:id])
+    if logged_in? && current_user.id == @interaction.contact.user_id
+      erb :'interactions/show'
+    else
+      redirect '/users/home'
+    end
+  end
 end

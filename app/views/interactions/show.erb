@@ -1,0 +1,19 @@
+<% if flash.has?(:message)%>
+  <p id="main-view-message"><%=flash[:message]%></p>
+<% end %>
+
+<section class="info-sections">
+
+  <div class="main-wrappers interaction-wrapper">
+    <h3><%=@interaction.contact.name%></h3>
+
+    <div class="user-show-div list-divs">
+      <%if @interaction.date != nil%><p class="list-info">Date: <%=@interaction.date%></p><%end%>
+      <%if @interaction.details != nil%><p class="list-info">Details: <%=@interaction.details%></p><%end%>
+      <%if @interaction.date == nil && @interaction.details == nil%><p class="list-info">You haven't added any information about this interaction, yet.</p><%end%>
+      <a href="/interactions/<%=@interaction.id%>/edit"><button class="users-show-buttons buttons">Edit</button></a>
+      <a href="/interactions/<%=@interaction.id%>/delete"><button id="delete-account-button" class="users-show-buttons buttons">Delete</button></a>
+    </div>
+
+  </div>
+</section>
