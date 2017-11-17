@@ -20,8 +20,8 @@
     <% @ordered_interactions.each do |interaction| %>
       <div class="list-divs interactions-list">
         <h4 class="list-titles"><a href="/contacts/<%=interaction.contact.id%>"><%=interaction.contact.name%></a></h4>
-        <p class="list-info"><%=interaction.date%></p>
-        <p class="list-info"><a href="/interactions/<%=interaction.id%>"><%=interaction.details%></a></p>
+        <% if interaction.date %><p class="list-info"><%=interaction.date%></p><% end %>
+        <% if interaction.details %><p class="list-info"><a href="/interactions/<%=interaction.id%>"><%=interaction.details%></a></p><% end %>
         <% if interaction.date == nil && interaction.details == nil %><p class="list-info"><a href="/interactions/<%=interaction.id%>">*There isn't any information about this interaction! Click to add some details.</a></p><% end %>
       </div>
     <% end %>

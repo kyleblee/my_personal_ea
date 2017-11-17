@@ -1,0 +1,16 @@
+<section class="info-sections">
+
+  <div class="main-wrappers interaction-wrapper">
+    <h3>Delete?</h3>
+    <p class="list-info">Are you sure you want to delete this interaction?</p>
+
+    <div class="user-show-div list-divs">
+      <form action="/interactions/<%=@interaction.id%>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input class="users-show-buttons buttons delete-buttons" type="submit" value="Yes">
+      </form>
+      <a href="/interactions/<%=@interaction.id%>"><button class="users-show-buttons buttons delete-buttons">No</button></a>
+    </div>
+
+  </div>
+</section>

@@ -77,4 +77,20 @@ class InteractionsController < ApplicationController
       redirect '/users/home'
     end
   end
+
+  get '/interactions/:id/delete' do
+    @interaction = LastInteraction.find_by_id(params[:id])
+    if logged_in? && @interaction.contact.user_id == current_user.id
+      erb :'interactions/delete'
+    else
+      redirect '/users/login'
+    end
+  end
+
+  delete '/interactions/:id' do
+    @interaction = LastInteraction.find_by_id(params[:id])
+    flash[:message] = "Interaction with #{@interaction.contact.name} deleted."
+    @interaction.delete
+    redirect "/users/home"
+  end
 end
