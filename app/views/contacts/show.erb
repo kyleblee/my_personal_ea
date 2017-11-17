@@ -23,6 +23,7 @@
             <h4 class="list-titles"><a href="/contacts/<%=interaction.contact.id%>"><%=interaction.contact.name%></a></h4>
             <p class="list-info"><%=interaction.date%></p>
             <p class="list-info"><a href="/interactions/<%=interaction.id%>"><%=interaction.details%></a></p>
+            <% if interaction.date == nil && interaction.details == nil %><p class="list-info"><a href="/interactions/<%=interaction.id%>">*There isn't any information about this interaction! Click to add some details.</a></p><% end %>
           </div>
         <% end %>
       </div>

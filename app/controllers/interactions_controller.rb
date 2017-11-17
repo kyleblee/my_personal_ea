@@ -43,6 +43,32 @@ class InteractionsController < ApplicationController
     end
   end
 
+  get '/interactions/:id/edit' do
+    @interaction = LastInteraction.find_by_id(params[:id])
+    if logged_in? && current_user.id == @interaction.contact.user_id
+      erb :'interactions/edit'
+    else
+      redirect '/users/home'
+    end
+  end
+
+  patch '/interactions/:id' do
+    @interaction = LastInteraction.find_by_id(params[:id])
+    @contact = Contact.find_by(name: params[:contact])
+    if params[:contact].empty?
+      flash[:message] = "Please provide a contact name for this interaction."
+      redirect "/interactions/#{params[:id]}/edit"
+    elsif !@contact || @contact.user_id != current_user.id
+      flash[:message] = "Please enter a valid contact name for this interaction."
+      redirect "/interactions/#{params[:id]}/edit"
+    else
+      params.delete_if {|k, v| v == ""}
+      @interaction.update(date: params[:date], details: params[:details])
+      @contact.last_interactions << @interaction unless @contact == @interaction.contact
+      redirect "/interactions/#{@interaction.id}"
+    end
+  end
+
   get '/interactions/:id' do
     @interaction = LastInteraction.find_by_id(params[:id])
     if logged_in? && current_user.id == @interaction.contact.user_id

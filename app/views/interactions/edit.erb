@@ -1,0 +1,20 @@
+<h1 class="form-headers">Edit Interaction</h1>
+
+<% if flash.has?(:message)%>
+  <p id="error-message"><%=flash[:message]%></p>
+<% end %>
+
+<form id="interactions-form" class="form-body" action="/interactions/<%=@interaction.id%>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+
+  <label for="contact"><span>Contact Name</span></label>
+  <input id="contact" type="text" name="contact" value="<%=@interaction.contact.name%>">
+
+  <label for="date"><span>Date</span></label>
+  <input id="date" type="text" name="date" value="<%=@interaction.date%>">
+
+  <label for="details"><span>Details</span></label>
+  <textarea id="details" name="details" form="interactions-form"><%=@interaction.details%></textarea>
+
+  <input class="submit-button" type="submit" value="Update Interaction">
+</form>
