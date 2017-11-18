@@ -21,7 +21,10 @@ class PlansController < ApplicationController
       flash[:message] = "Please enter a name for this plan."
       redirect '/plans/new'
     elsif Plan.find_by(name: params[:name]) && Plan.find_by(name: params[:name]).user == current_user
-      flash[:message] = "You already have a plan with that name; please provide a different name for this new plan."
+      flash[:message] = "You already have a plan with that name.<br>Please provide a different name for this new plan."
+      redirect '/plans/new'
+    elsif Contact.find_by(name: params[:contact][:new_contact_name]) && Contact.find_by(name: params[:contact][:new_contact_name]).user_id == current_user.id
+      flash[:message] = "You already have an existing contact with that name.<br>Please choose this contact from the contacts checklist."
       redirect '/plans/new'
     else
       params.delete_if {|k, v| v == ""}
@@ -32,8 +35,13 @@ class PlansController < ApplicationController
       unless params[:contact][:new_contact_name].empty?
         @plan.contacts << Contact.create(name: params[:contact][:new_contact_name])
       end
-      binding.pry
+      current_user.plans << @plan
       redirect "/plans/#{@plan.id}"
     end
+  end
+
+  get '/plans/:id' do
+    @plan = Plan.find_by_id(params[:id])
+    binding.pry
   end
 end
