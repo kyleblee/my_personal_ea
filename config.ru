@@ -6,4 +6,5 @@ use Rack::MethodOverride
 use UsersController
 use ContactsController
 use InteractionsController
+use PlansController
 run ApplicationController

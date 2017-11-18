@@ -1,0 +1,41 @@
+<% if flash.has?(:message)%>
+  <p id="main-view-message"><%=flash[:message]%></p>
+<% end %>
+
+<section class="info-sections contacts-section">
+  <div class="profile-picture"></div>
+  <h2><%=current_user.username%>'s plans</h2>
+  <p>Good times...</p>
+
+  <div class="option-lockup">
+    <a href="/plans/new"><button class="buttons" id="create-contact-button">Create a new plan</button></a>
+  </div>
+
+  <div class="main-wrappers">
+    <h3>Plans</h3>
+
+    <% if current_user.plans.empty? %><p class="list-info">You haven't created any plans, yet!</p> <% end %>
+    <% current_user.plans.each do |plan| %>
+      <div class="list-divs interactions-list">
+        <h4 class="list-titles"><a href="/plans/<%=plan.id%>"><%=plan.name%></a></h4>
+        <%if plan.date%><p class="list-info">Date: <%=plan.date%></p><%end%>
+        <%if plan.location%><p class="list-info">Time: <%=plan.time%></p><%end%>
+        <%if plan.location%><p class="list-info">Location: <%=plan.location%></p><%end%>
+        <%if plan.context%><p class="list-info">Context: <%=plan.context%></p><%end%>
+        <%if plan.pre_notes%><p class="list-info">Pre-notes: <%=plan.pre_notes%></p><%end%>
+        <%if plan.post_notes%><p class="list-info">Post-notes: <%=plan.post_notes%></p><%end%>
+        <%if !plan.contacts.empty?%>
+          <p>Contacts invited:</p>
+          <ul>
+            <%plan.contacts.each do |contact|%>
+              <li><%=contact.name%></li>
+            <% end %>
+          </ul>
+        <%end%>
+        <a href="/plans/<%=plan.id%>/edit"><button class="first-contact-button buttons contacts-buttons">Edit Plan</button></a>
+        <a href="/plans/<%=plan.id%>/delete"><button class="buttons contacts-buttons">Delete Plan</button></a>
+      </div>
+    <% end %>
+
+  </div>
+</section>
