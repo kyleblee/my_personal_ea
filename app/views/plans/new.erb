@@ -4,23 +4,38 @@
   <p id="error-message"><%=flash[:message]%></p>
 <% end %>
 
-<form id="interactions-form" class="form-body" action="/interactions" method="post">
-  <label><span>Contact Name</span></label>
-  <%if current_user.contacts.empty?%>
-    <input id="contact_name" type="text" name="contact_name">
-  <% else %>
-    <%current_user.contacts.each do |contact|%>
-      <input class="contact-radio" type="radio" name="contact_name" value="<%=contact.name%>" <%='checked' if @contact && @contact.name == contact.name%>><%=contact.name%></input>
-    <% end %>
-    <label for="new_contact_name" id="new-contact-interaction"><span>Or, add a new contact for this interaction:</span></label>
-    <input id="new_contact_name" type="text" name="new_contact_name">
-  <% end %>
+<form id="plan-form" class="form-body" action="/plans" method="post">
+  <label for="name"><span>Plan Name</span></label>
+  <input id="name" type="text" name="name">
 
-  <label for="date"><span>Interaction Date</span></label>
+  <label for="date"><span>Date</span></label>
   <input id="date" type="text" name="date">
 
-  <label for="details"><span>Details</span></label>
-  <textarea id="details" name="details" form="interactions-form"></textarea>
+  <label for="time"><span>Time</span></label>
+  <input id="time" type="text" name="time">
 
-  <input class="submit-button" type="submit" value="Log Interaction">
+  <label for="location"><span>Location</span></label>
+  <input id="location" type="text" name="location">
+
+  <label for="context"><span>Context</span></label>
+  <textarea class="plan-textarea" id="context" name="context" form="plan-form"></textarea>
+
+  <label for="pre_notes"><span>Prep notes</span></label>
+  <textarea class="plan-textarea" id="pre_notes" name="pre_notes" form="plan-form"></textarea>
+
+  <label for="post_notes"><span>Post plan notes</span></label>
+  <textarea class="plan-textarea" id="post_notes" name="post_notes" form="plan-form"></textarea>
+
+  <label id="invite-contacts"><span>Contacts to Invite</span></label>
+  <%if current_user.contacts.empty?%>
+    <input id="contact_name" type="text" name="contact[new_contact_name]">
+  <% else %>
+    <%current_user.contacts.each do |contact|%>
+      <input class="contact-invite-checkbox" type="checkbox" name="contact[existing_contacts][]" value="<%=contact.name%>"><%=contact.name%></input>
+    <% end %>
+    <label for="new_contact_name"><span>And/or, add a new contact for this plan:</span></label>
+    <input id="new_contact_name" type="text" name="contact[new_contact_name]">
+  <% end %>
+
+  <input class="submit-button" type="submit" value="Create Plan">
 </form>

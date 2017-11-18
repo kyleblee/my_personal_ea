@@ -396,9 +396,10 @@ div.main-wrappers h3 ~ p.list-info {
   margin-top: 25px;
 }
 
-/*****NEW INTERACTION*****/
+/*****NEW INTERACTION / PLAN*****/
 
-textarea#details {
+textarea#details,
+textarea.plan-textarea {
   height: 160px;
   border: 3px solid rgb(138,95,119);
   width: 100%;
@@ -408,12 +409,14 @@ textarea#details {
   resize: none;
 }
 
-textarea#details:focus {
+textarea#details:focus,
+textarea.plan-textarea:focus {
   outline: none;
   border-color: rgb(253, 232, 205);
 }
 
-form#interactions-form input.contact-radio {
+form#interactions-form input.contact-radio,
+form#plan-form input.contact-invite-checkbox {
   display: inline-block;
   position: relative;
   width: 20px;
@@ -421,4 +424,8 @@ form#interactions-form input.contact-radio {
 
 label#new-contact-interaction {
   margin-top: 10px;
+}
+
+form#plan-form input.submit-button {
+  margin-bottom: 60px;
 }
