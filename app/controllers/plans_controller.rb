@@ -42,6 +42,15 @@ class PlansController < ApplicationController
 
   get '/plans/:id' do
     @plan = Plan.find_by_id(params[:id])
-    binding.pry
+  end
+
+  helpers do
+    def plan_with_no_info?(plan)
+      if !plan.date && !plan.time && !plan.location && !plan.context && !plan.pre_notes && !plan.post_notes && plan.contacts.empty?
+        true
+      else
+        false
+      end
+    end
   end
 end

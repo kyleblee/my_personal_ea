@@ -19,7 +19,7 @@
       <div class="list-divs interactions-list">
         <h4 class="list-titles"><a href="/plans/<%=plan.id%>"><%=plan.name%></a></h4>
         <%if plan.date%><p class="list-info">Date: <%=plan.date%></p><%end%>
-        <%if plan.location%><p class="list-info">Time: <%=plan.time%></p><%end%>
+        <%if plan.time%><p class="list-info">Time: <%=plan.time%></p><%end%>
         <%if plan.location%><p class="list-info">Location: <%=plan.location%></p><%end%>
         <%if plan.context%><p class="list-info">Context: <%=plan.context%></p><%end%>
         <%if plan.pre_notes%><p class="list-info">Pre-notes: <%=plan.pre_notes%></p><%end%>
@@ -32,6 +32,7 @@
             <% end %>
           </ul>
         <%end%>
+        <% if plan_with_no_info?(plan) %><p class="list-info"><a href="/plans/<%=plan.id%>">*There isn't any information about this plan! Click here to add some details.</a></p><% end %>
         <a href="/plans/<%=plan.id%>/edit"><button class="first-contact-button buttons contacts-buttons">Edit Plan</button></a>
         <a href="/plans/<%=plan.id%>/delete"><button class="buttons contacts-buttons">Delete Plan</button></a>
       </div>
