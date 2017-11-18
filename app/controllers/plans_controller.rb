@@ -42,6 +42,12 @@ class PlansController < ApplicationController
 
   get '/plans/:id' do
     @plan = Plan.find_by_id(params[:id])
+    if logged_in? && @plan.user == current_user
+      erb :'plans/show'
+    else
+      redirect '/users/login'
+    end
+
   end
 
   helpers do
