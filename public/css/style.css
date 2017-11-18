@@ -429,3 +429,15 @@ label#new-contact-interaction {
 form#plan-form input.submit-button {
   margin-bottom: 60px;
 }
+
+/*****PLANS INDEX*****/
+
+div.contacts-list {
+  padding-left: 20px;
+  color: rgba(0,0,0,0.7);
+  font-weight: 400;
+}
+
+h4.plans-names + p {
+  margin-top: 15px;
+}
