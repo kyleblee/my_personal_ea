@@ -6,7 +6,7 @@ Growing your network should be easy and exciting — *My Personal EA* is here to
 
 ### Installation
 
-ONCE DEPLOYED ON HEROKU, INSERT DESCRIPTION HERE, using ```code snippets```
+Simply visit https://my-personal-ea.herokuapp.com/ in your browser of choice.
 
 ### Contributors Guide
 
