@@ -156,7 +156,7 @@ nav a:hover {
 /*****HOMEPAGE (logged out)*****/
 
 div.homepage-main {
-  background: url(../img/croatia_coast.jpg) center center;
+  background: url(../img/croatia_coast-resize.jpg) center center;
   background-size: cover;
   height: 1300px;
 }
@@ -442,11 +442,8 @@ h4.plans-names + p {
   margin-top: 15px;
 }
 
-/*****MEDIA QUERIES*****/
 
-div.homepage-main {
-  
-}
+/*****MEDIA QUERIES*****/
 
 @media (max-width: 640px) {
 
@@ -521,4 +518,12 @@ div.homepage-main {
   footer div.lockup {
     padding: 20px 20px;
   }
+}
+
+@media (max-height: 700px) {
+
+  div.homepage-main {
+    height: 900px;
+  }
+
 }
