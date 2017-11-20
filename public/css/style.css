@@ -158,7 +158,7 @@ nav a:hover {
 div.homepage-main {
   background: url(../img/croatia_coast.jpg) center center;
   background-size: cover;
-  height: 1000px;
+  height: 1300px;
 }
 
 div.homepage-main h1 {
@@ -443,6 +443,10 @@ h4.plans-names + p {
 }
 
 /*****MEDIA QUERIES*****/
+
+div.homepage-main {
+  
+}
 
 @media (max-width: 640px) {
 
