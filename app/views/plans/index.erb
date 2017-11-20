@@ -18,14 +18,14 @@
     <% current_user.plans.each do |plan| %>
       <div class="list-divs interactions-list">
         <h4 class="list-titles plans-names"><a href="/plans/<%=plan.id%>"><%=plan.name%></a></h4>
-        <%if plan.date%><p class="list-info">Date: <%=plan.date%></p><%end%>
-        <%if plan.time%><p class="list-info">Time: <%=plan.time%></p><%end%>
-        <%if plan.location%><p class="list-info">Location: <%=plan.location%></p><%end%>
-        <%if plan.context%><p class="list-info">Context: <%=plan.context%></p><%end%>
-        <%if plan.pre_notes%><p class="list-info">Pre-notes: <%=plan.pre_notes%></p><%end%>
-        <%if plan.post_notes%><p class="list-info">Post-notes: <%=plan.post_notes%></p><%end%>
+        <%if plan.date%><p class="list-info"><a href="/plans/<%=plan.id%>">Date: <%=plan.date%></a></p><%end%>
+        <%if plan.time%><p class="list-info"><a href="/plans/<%=plan.id%>">Time: <%=plan.time%></a></p><%end%>
+        <%if plan.location%><p class="list-info"><a href="/plans/<%=plan.id%>">Location: <%=plan.location%></a></p><%end%>
+        <%if plan.context%><p class="list-info"><a href="/plans/<%=plan.id%>">Context: <%=plan.context%></a></p><%end%>
+        <%if plan.pre_notes%><p class="list-info"><a href="/plans/<%=plan.id%>"><Pre-notes: <%=plan.pre_notes%></a></p><%end%>
+        <%if plan.post_notes%><p class="list-info"><a href="/plans/<%=plan.id%>">Post-notes: <%=plan.post_notes%></a></p><%end%>
         <%if !plan.contacts.empty?%>
-          <p>Contacts invited:</p>
+          <p><a href="/plans/<%=plan.id%>">Contacts invited:</a></p>
           <div class="contacts-list">
             <ul>
               <%plan.contacts.each do |contact|%>

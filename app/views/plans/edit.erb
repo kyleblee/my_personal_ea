@@ -1,0 +1,43 @@
+<h1 class="form-headers">Edit Plan</h1>
+
+<% if flash.has?(:message)%>
+  <p id="error-message"><%=flash[:message]%></p>
+<% end %>
+
+<form id="plan-form" class="form-body" action="/plans/<%=@plan.id%>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+
+  <label for="name"><span>Plan Name</span></label>
+  <input id="name" type="text" name="name" value="<%=@plan.name%>">
+
+  <label for="date"><span>Date</span></label>
+  <input id="date" type="text" name="date" value="<%=@plan.date%>">
+
+  <label for="time"><span>Time</span></label>
+  <input id="time" type="text" name="time" value="<%=@plan.time%>">
+
+  <label for="location"><span>Location</span></label>
+  <input id="location" type="text" name="location" value="<%=@plan.location%>">
+
+  <label for="context"><span>Context</span></label>
+  <textarea class="plan-textarea" id="context" name="context" form="plan-form"><%=@plan.context%></textarea>
+
+  <label for="pre_notes"><span>Prep notes</span></label>
+  <textarea class="plan-textarea" id="pre_notes" name="pre_notes" form="plan-form"><%=@plan.pre_notes%></textarea>
+
+  <label for="post_notes"><span>Post-plan notes</span></label>
+  <textarea class="plan-textarea" id="post_notes" name="post_notes" form="plan-form"><%=@plan.post_notes%></textarea>
+
+  <label id="invite-contacts"><span>Contacts to Invite</span></label>
+  <%if current_user.contacts.empty?%>
+    <input id="contact_name" type="text" name="contact[new_contact_name]">
+  <% else %>
+    <%current_user.contacts.each do |contact|%>
+      <input class="contact-invite-checkbox" type="checkbox" name="contact[existing_contacts][]" value="<%=contact.name%>" <%='checked' if @plan.contacts.include?(contact)%>><%=contact.name%></input>
+    <% end %>
+    <label for="new_contact_name"><span>And/or, add a new contact for this plan:</span></label>
+    <input id="new_contact_name" type="text" name="contact[new_contact_name]">
+  <% end %>
+
+  <input class="submit-button" type="submit" value="Update this Plan">
+</form>
