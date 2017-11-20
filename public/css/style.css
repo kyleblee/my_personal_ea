@@ -441,3 +441,80 @@ div.contacts-list {
 h4.plans-names + p {
   margin-top: 15px;
 }
+
+/*****MEDIA QUERIES*****/
+
+@media (max-width: 640px) {
+
+  /*****HOMEPAGE (LOGGED OUT)*****/
+
+  header div.logo p {
+    margin: 20px auto 20px;
+    float: none;
+    display: block;
+    text-align: center;
+  }
+
+  header div.logo {
+    margin: 20px auto 20px;
+  }
+
+  header div.logo p a {
+    margin: 20px auto 20px;
+  }
+
+  header nav {
+    margin: 20px auto 0;
+    display: block;
+    float: none;
+    text-align: center;
+  }
+
+  header nav a {
+    margin-left: 20px;
+  }
+
+  header nav a:first-child {
+    margin-left: 0;
+  }
+
+  div.homepage-main {
+    height: 800px;
+  }
+
+  div.homepage-main h1 {
+    font-size: 1.75em;
+    padding-top: 60px;
+  }
+
+  div.homepage-main h1 span {
+    border: black solid 6px;
+  }
+
+  div.homepage-main p.kicker {
+    font-size: 1.05em;
+  }
+
+  footer div.lockup div.logo {
+    text-align: center;
+    float: none;
+    margin-right: 0;
+  }
+
+  footer div.lockup div.content-wrap p.copyright {
+    text-align: center;
+  }
+
+  footer div.lockup div.content-wrap p#copyright-out {
+    margin: 10px auto 0;
+  }
+
+  footer div.lockup div.content-wrap {
+    float: none;
+    margin-right: 0;
+  }
+
+  footer div.lockup {
+    padding: 20px 20px;
+  }
+}
