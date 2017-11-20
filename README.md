@@ -1,6 +1,6 @@
 # My Personal EA
 
-Making new contacts is fun! But, keeping up with all of them can be overwhelming. *My Personal EA* is here to make sure that you have as much fun staying in touch with contacts, as you do meeting them. Easily add contacts to your list. Log interactions so you remember the last time you connected with someone and what you talked about. Make plans that help you remember upcoming get togethers, prepare for those gatherings, and keep notes on how they went.
+Making new contacts is fun! But, keeping up with all of them can be overwhelming. *My Personal EA* is here to make sure that you have as much fun staying in touch with contacts, as you do meeting them. Easily add contacts to your list. Log interactions, so you remember the last time you connected with someone and what you talked about. Make plans that help you remember upcoming get togethers, prepare for those gatherings, and keep notes on how they went.
 
 Growing your network should be easy and exciting — *My Personal EA* is here to make it that way.
 
