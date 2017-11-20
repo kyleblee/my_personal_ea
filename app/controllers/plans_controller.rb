@@ -98,6 +98,23 @@ class PlansController < ApplicationController
     end
   end
 
+  get '/plans/:id/delete' do
+    @plan = Plan.find_by_id(params[:id])
+    if logged_in? && current_user == @plan.user
+      erb :'plans/delete'
+    else
+      redirect '/users/login'
+    end
+  end
+
+  delete '/plans/:id' do
+    @plan = Plan.find_by_id(params[:id])
+
+    @plan.delete
+    flash[:message] = "Plan has been deleted successfully."
+    redirect '/plans'
+  end
+
   helpers do
     def plan_with_no_info?(plan)
       if !plan.date && !plan.time && !plan.location && !plan.context && !plan.pre_notes && !plan.post_notes && plan.contacts.empty?
