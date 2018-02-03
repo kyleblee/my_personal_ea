@@ -4,6 +4,9 @@ Making new contacts is fun! But, keeping up with all of them can be overwhelming
 
 Growing your network should be easy and exciting — *My Personal EA* is here to make it that way.
 
+Blog post on process / functionality:
+- http://kyleblee.com/my_personal_ea_sinatra_project
+
 ### Installation
 
 Simply visit https://my-personal-ea.herokuapp.com/ in your browser of choice.

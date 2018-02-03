@@ -23,6 +23,8 @@
         <% if interaction.date %><p class="list-info"><a href="/interactions/<%=interaction.id%>"><%=interaction.date%></a></p><% end %>
         <% if interaction.details %><p class="list-info"><a href="/interactions/<%=interaction.id%>"><%=interaction.details%></a></p><% end %>
         <% if interaction.date == nil && interaction.details == nil %><p class="list-info"><a href="/interactions/<%=interaction.id%>">*There isn't any information about this interaction! Click to add some details.</a></p><% end %>
+        <a href="/interactions/<%=interaction.id%>/edit"><button class="users-show-buttons buttons">Edit</button></a>
+        <a href="/interactions/<%=interaction.id%>/delete"><button id="delete-account-button" class="users-show-buttons buttons">Delete</button></a>
       </div>
     <% end %>
 

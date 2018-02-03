@@ -17,6 +17,7 @@ class ContactsController < ApplicationController
   end
 
   post '/contacts' do
+    authenticate_user
     if params[:name] == ""
       flash[:message] = "Please enter a name for the new contact."
       redirect '/contacts/new'
@@ -37,11 +38,12 @@ class ContactsController < ApplicationController
   end
 
   get '/contacts/:id/edit' do
-    @contact = Contact.find_by_id(params[:id])
-    if logged_in? && @contact.user_id == current_user.id
+    authenticate_user
+    @contact = Contact.find_by(id: params[:id])
+    if @contact && @contact.user == current_user
       erb :'contacts/edit'
     else
-      redirect '/users/login'
+      redirect '/contacts'
     end
   end
 
